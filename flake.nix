@@ -45,6 +45,7 @@
       );
 
     mkOutputs = pkgs: {
+      inherit (pkgs.vimPlugins) yalms;
       default = pkgs.callPackage ./vim-plugin.nix {};
     };
   in {
@@ -70,7 +71,7 @@
       vimPlugins =
         prev.vimPlugins
         // {
-          orgnomics = outputs.vimPlugin;
+          orgnomics = outputs.default;
         };
     });
 

@@ -9,8 +9,9 @@
   },
   "workspace": {
     "library": [
-      "${env:LDX_LOCAL____YALMS_LUA}",
+      "${env:LDX_FLAKE___YALMS}",
       "${env:LDX_LUV_LIBRARY}",
+      "${env:LDX_VIMPLUGINS_ORGMODE}",
       "${env:LDX_VIMPLUGINS_SNACKS_NVIM}",
       "${env:LDX_VIM_RUNTIME}"
     ]
