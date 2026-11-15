@@ -4,11 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
 
-    pog = {
-      url = "github:jpetrucciani/pog";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     ldx = {
       url = "github:ar-at-localhost/ldx";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -36,7 +31,6 @@
             pkgs = import inputs.nixpkgs {
               inherit system;
               overlays = [
-                inputs.pog.overlays.default
                 inputs.ldx.overlays.default
                 inputs.yalms.overlays.default
               ];
